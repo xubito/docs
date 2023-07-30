@@ -104,8 +104,10 @@ function Header({ navigation }) {
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
         <Link href="/" aria-label="Home page">
+          <>
           <Logomark className="h-9 w-9 lg:hidden" />
           <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-sky-100 lg:block" />
+          </>
         </Link>
       </div>
       <div className="-my-5 mr-6 sm:mr-8 md:mr-0">
@@ -240,8 +242,10 @@ export function Layout({
                       href={previousPage.href}
                       className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
                     >
+                      <>
                       <span aria-hidden="true">&larr;</span>{' '}
                       {previousPage.title}
+                      </>
                     </Link>
                   </dd>
                 </div>
@@ -256,7 +260,9 @@ export function Layout({
                       href={nextPage.href}
                       className="text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
                     >
+                      <>
                       {nextPage.title} <span aria-hidden="true">&rarr;</span>
+                      </>
                     </Link>
                   </dd>
                 </div>
@@ -286,8 +292,8 @@ export function Layout({
                                 ? 'text-sky-500'
                                 : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                             )}
-                          >
-                            {section.title}
+                          ><>
+                            {section.title}</>
                           </Link>
                         </h3>
                         {section.children.length > 0 && (
@@ -304,8 +310,9 @@ export function Layout({
                                       ? 'text-sky-500'
                                       : 'hover:text-slate-600 dark:hover:text-slate-300'
                                   }
-                                >
+                                ><>
                                   {subSection.title}
+                                  </>
                                 </Link>
                               </li>
                             ))}

@@ -20,9 +20,7 @@ export default function NotFound() {
         <Link
           href="/"
           className="mt-8 text-sm font-medium text-slate-900 dark:text-white"
-        >
-          Go back home
-        </Link>
+        >Go back home</Link>
       </div>
     </>
   )
