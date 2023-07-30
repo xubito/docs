@@ -16,3 +16,4 @@ const nextConfig = {
 export default withSearch(
   withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig)
 )
+
